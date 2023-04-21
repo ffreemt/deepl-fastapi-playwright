@@ -1,6 +1,6 @@
 {
   "name": "deepl-fastapi-pw",
-  "version": "0.1.1-0",
+  "version": "0.1.1-1",
   "description": "deepl via fastapi",
   "main": "index.js",
   "scripts": {
