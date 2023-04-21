@@ -67,8 +67,8 @@ import requests
 # get
 url =  "http://127.0.0.1:8001/text/?q=test me&to_lang=zh"
 print(requests.get(url).json())
-# {'q': 'test me', 'from_lang': None, 'to_lang': 'zh',
-# 'trtext': '考我 试探我 测试我 试探'}
+# {"q":"test me","from_lang":null,"to_lang":"zh",
+# "trtext":"测试我","translation":"测试我"}
 
 # post
 text = "test this and that"
