@@ -14,7 +14,11 @@ from logzero import logger
 # _ = """
 lockfile = f'{Path(__file__).parent.parent / "deepl_fastapi" / "deepl_server.py.portalocker.lock"}'
 logger.info("lockfile: %s", lockfile)
-file = open(lockfile, "r+")
+
+# create one if not exist
+Path(lockfile).touch(exist_ok=True)
+file = open(lockfile)
+
 try:
     portalocker.lock(file, portalocker.LOCK_EX | portalocker.LOCK_NB)
     locked = False
