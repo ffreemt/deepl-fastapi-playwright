@@ -1,15 +1,17 @@
 """Sanity check."""
 import os
+import sys
+from pathlib import Path
+from subprocess import Popen
 from time import sleep
 
+import portalocker
 import requests
-
-# import portalocker
 from logzero import logger
 
 # start the server if not already started
 
-_ = """
+# _ = """
 lockfile = f'{Path(__file__).parent.parent / "deepl_fastapi" / "deepl_server.py.portalocker.lock"}'
 logger.info("lockfile: %s", lockfile)
 file = open(lockfile, "r+")
