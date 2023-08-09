@@ -1,5 +1,6 @@
 # pylint: disable=invalid-name, duplicate-code, no-name-in-module, broad-except, line-too-long
-r"""Run deepl-fastapi-pw.
+r"""
+Run deepl-fastapi-pw.
 
 Test from the command line:
 ```bash
@@ -89,7 +90,8 @@ app = FastAPI(
 
 @app.post("/text/")
 def post_text(q: Text):
-    """Post to /text/.
+    """
+    Post to /text/.
 
     Post -d '\u007b"text": "this is a test", "to_lang": "zh" \u007d'
     to http://127.0.0.1:{port}/text/
@@ -139,7 +141,8 @@ def get_text(
     from_lang: Optional[str] = None,
     to_lang: Optional[str] = "zh",
 ):
-    r"""Get text.
+    r"""
+    Get text.
 
     curl "http://127.0.0.1:8001/text/?q=test%20this&to_lang=zh"
 
@@ -173,7 +176,8 @@ def get_text(
 
 
 def run_uvicorn():
-    """Run uvicor.
+    """
+    Run uvicor.
 
     Must be run from a different file, e.g., run_uvicorn.py
     """

@@ -1,5 +1,4 @@
 import os
-from pathlib import Path
 
 os.system("python -V")
 # py = Path().absolute() / ".venv/Scripts/python.exe"

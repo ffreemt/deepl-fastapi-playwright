@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "deepl-fastapi-pw"
-version = "0.1.0a1"
-description = "deepl via fastapi using deepl-scraper-pw"
+version = "0.1.0a2"
+description = "deepl via fastapi using playwright"
 authors = ["freemt"]
 license = "MIT"
 readme = "README.md"
@@ -36,6 +36,7 @@ deepl-fastapi-pw = "deepl_fastapi_pw.run_uvicorn:main"
 [tool.poetry.group.dev.dependencies]
 requests = "^2.28.2"
 pyperclip = "^1.8.2"
+ruff = "^0.0.283"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]

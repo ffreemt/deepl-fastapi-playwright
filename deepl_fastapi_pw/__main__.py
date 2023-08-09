@@ -1,4 +1,5 @@
-"""Run uvicorn with deepl_fastapi.deepl_server:app.
+"""
+Run uvicorn with deepl_fastapi.deepl_server:app.
 
 uvicorn deepl_fastapi.deepl_server:app --reload
 

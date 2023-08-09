@@ -1,11 +1,8 @@
 """Sanity check."""
 import os
-import sys
-from pathlib import Path
 from time import sleep
 
 import requests
-from subprocess import Popen
 
 # import portalocker
 from logzero import logger

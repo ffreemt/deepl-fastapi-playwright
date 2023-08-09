@@ -1,4 +1,5 @@
-r"""Scrape deepl via playwright (get_pwbrowser_sync).
+r"""
+Scrape deepl via playwright (get_pwbrowser_sync).
 
 org deepl_tr_pp
 
@@ -32,7 +33,7 @@ URL = r"https://www.deepl.com/translator"
 
 
 def with_func_attrs(**attrs: Any) -> Callable:
-    """with_func_attrs"""
+    """Define with_func_attrs."""
 
     def with_attrs(fct: Callable) -> Callable:
         for key, val in attrs.items():
@@ -52,7 +53,8 @@ async def deepl_tr(
     timeout: float = 5,
     headless: Optional[bool] = None,
 ):
-    """Deepl via playwright-sync.
+    r"""
+    Deepl via playwright-sync.
 
     text = "Test it and\n\n more"
     from_lang="auto"
@@ -253,14 +255,21 @@ async def deepl_tr(
 
     logger.debug(" Fini ")
 
-    # remove possible attached suffix
-    content = re.sub(r"[\d]+_$", "", content.strip()).strip()
+    # remove possible attached suffix, content can be None (abnormal)
+    try:
+        content = re.sub(r"[\d]+_$", "", content.strip()).strip()
+    except Exception as exc:
+        raise Exception(
+            f" {exc}: scraping unsuccessful, "
+            "deepl.com unreachable or deepl.com changed "
+            "its layout or can be other issues."
+        )
 
     return content
 
 
 def main():
-    """Main."""
+    """Run main."""
     text = "test this and that and more"
     res = deepl_tr(text)
     logger.info("%s, %s, time elased: %s", text, res, deepl_tr.dur)

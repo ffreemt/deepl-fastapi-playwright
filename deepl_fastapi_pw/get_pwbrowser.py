@@ -1,4 +1,5 @@
-r"""Instantiate a playwright chrominium browser.
+r"""
+Instantiate a playwright chrominium browser.
 
 Respect PWBROWSER_ environ variables in .env
 
@@ -65,7 +66,8 @@ finally:  # restore
 
 
 class Settings(BaseSettings):  # pylint: disable=too-few-public-methods
-    """Configure params DEBUG HEADFUL PROXY.
+    """
+    Configure params DEBUG HEADFUL PROXY.
 
     import asyncio
     from playwright.async_api import async_playwright
