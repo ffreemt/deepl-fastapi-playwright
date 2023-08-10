@@ -56,7 +56,7 @@ if not locked:
 
 def test_deepl_server():
     try:
-        _ = requests.get("http://127.0.0.1:8000/text/?q=test me", verify=False, timeout=5)
+        _ = requests.get("http://127.0.0.1:8001/text/?q=test me", verify=False, timeout=5)
         res = str(_.json())
     except Exception as exc:
         logger.error(exc)
@@ -67,7 +67,7 @@ def test_deepl_server():
         else:  # Windows wait longer
             sleep(140)
         try:
-            _ = requests.get("http://127.0.0.1:8000/text/?q=test me", verify=False, timeout=5)
+            _ = requests.get("http://127.0.0.1:8001/text/?q=test me", verify=False, timeout=5)
             res = str(_.json())
         except Exception as exc:
             logger.error("2nd try: %s", exc)
