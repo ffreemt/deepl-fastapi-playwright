@@ -63,7 +63,7 @@ uvicorn deepl_fastapi_pw.deepl_server:app --reload --host 0.0.0.0 --port 9888
 
 *   Explore and consume
 
-Point your browser to [http://127.0.0.1:8001/text/?q=test&to_lang=zh](http://127.0.0.1:8000/text/?q=test&to_lang=zh)
+Point your browser to [http://127.0.0.1:8001/text/?q=test&to_lang=zh](http://127.0.0.1:8001/text/?q=test&to_lang=zh)
 
 Or in python code (`pip install requests` first)
 ```python

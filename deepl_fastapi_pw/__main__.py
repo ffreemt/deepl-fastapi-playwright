@@ -56,18 +56,21 @@ async def get_page():
         logger.error(exc)
         raise
 
-    url = r"https://www.deepl.com/translator"
+    url = "https://www.deepl.com/translator"
     try:
         await page.goto(url, timeout=16 * 1000)
     except Exception as exc:
-        logger.error(exc)
+        logger.error(f"unable to connect to {url}: {exc}, make sure your net is up...")
         raise
 
     return page
 
 
-LOOP = asyncio.get_event_loop()
-PAGE = LOOP.run_until_complete(get_page())
+try:
+    LOOP = asyncio.get_event_loop()
+    PAGE = LOOP.run_until_complete(get_page())
+except Exception as exc:
+    logger.error(exc)
 
 descr = f"""curl -XPOST http://127.0.0.1:{port}/text/ -d '\u007b"text": "this is a test", "to_lang": "zh" \u007d'"""
 
@@ -175,17 +178,19 @@ def get_text(
     return result
 
 
-def run_uvicorn():
+def run_uvicorn(port_: Optional[str] = None):
     """
     Run uvicor.
 
     Must be run from a different file, e.g., run_uvicorn.py
     """
+    if port_ is None:
+        port_ = port
     uvicorn.run(
         # app="deepl_fastapi.deepl_server:app",
         app=app,  # this should work with python -m deepl_fastapi.deepl_server_async
         # host="0.0.0.0",
-        port=port,
+        port=port_,
         # debug=True,
         # reload=True,
         # workers=2,
@@ -202,9 +207,11 @@ def main():
 
 if __name__ == "__main__":
     signal(SIGINT, SIG_DFL)  # signal only works in __main__
-    print("ctrl-C to interrupt, visit http://...:../docs for api docs")
-    main()
-
+    print("ctrl-C to interrupt, visit http://....:../docs for api docs")
+    try:
+        main()
+    except Exception as exc:
+        logger.error(exc)
     # uvicorn.run(app, host="0.0.0.0", port=8000)
     # uvicorn.run("app.app:app",host='0.0.0.0', port=4557, reload=True, debug=True, workers=3)
 

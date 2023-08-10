@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "deepl-fastapi-pw"
-version = "0.1.0a3"
+version = "0.1.0a4"
 description = "deepl via fastapi using playwright"
 authors = ["freemt"]
 license = "MIT"
