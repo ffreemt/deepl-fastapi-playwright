@@ -9,11 +9,11 @@ Your own deepl server via fastapi and playwright, cross-platform (Windows/Linux/
     e.g.,
     ```bash
     # Linux and friends
-    python3.7 -m venv .venv
+    python3.8 -m venv .venv
     source .venv/bin/activate
 
     # Windows
-    # py -3.7 -m venv .venv
+    # py -3.8 -m venv .venv
     # .venv\Scripts\activate
     ```
 
@@ -41,7 +41,11 @@ or
 
 *   Start the server
 
-Use uvicorn directly (note the `deepl_server` module, not `run_uvicorn`)
+```
+python  -m deepl_fastapi_pw
+```
+
+Or use uvicorn directly (note the `deepl_server` module, not `run_uvicorn`)
 ```bash
 uvicorn deepl_fastapi_pw.deepl_server_async:app
 ```
@@ -65,19 +69,23 @@ Or in python code (`pip install requests` first)
 import requests
 
 # get
-url =  "http://127.0.0.1:8001/text/?q=test me&to_lang=zh"
+url = "http://127.0.0.1:8001/text/?q=test me&to_lang=zh"
 print(requests.get(url).json())
-# {"q":"test me","from_lang":null,"to_lang":"zh",
-# "trtext":"测试我","translation":"测试我"}
+# {'q': 'test me', 'from_lang': None, 'to_lang':
+# 'zh', 'trtext': '考我', 'translation': '考我'}
+```
 
+`'translation'` is there for `OmegaT` plugin. Refer to the `OmegaT Fake MT plugin setup` part
+in [https://github.com/ffreemt/deepl-fastapi](https://github.com/ffreemt/deepl-fastapi)
+
+```
 # post
-text = "test this and that"
+text = "test me \n and him"
 data = {"text": text, "to_lang": "zh"}
 resp = requests.post("http://127.0.0.1:8001/text", json=data)
 print(resp.json())
-# {'q': {'text': 'test this and that', 'from_lang': None, 'to_lang': 'zh', 'description': None},
-# 'result': '试探 左右逢源 检验 审时度势'}
-
+# {'q': {'text': 'test me \n and him', 'from_lang': None,
+# 'to_lang': 'zh', 'description': None}, 'result': '考验我 \n  我和他'}
 ```
 
 ## Interactive Docs (Swagger UI)

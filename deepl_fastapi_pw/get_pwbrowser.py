@@ -58,8 +58,8 @@ try:
     main()
 except SystemExit:
     ...
-except Exception as exc:
-    logger.error(exc)
+except Exception as exc_:
+    logger.error(exc_)
     raise
 finally:  # restore
     sys.argv = _[:]

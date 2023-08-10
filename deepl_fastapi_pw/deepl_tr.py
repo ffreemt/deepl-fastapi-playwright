@@ -45,7 +45,7 @@ def with_func_attrs(**attrs: Any) -> Callable:
 
 @with_func_attrs(from_lang="", to_lang="", text="")
 async def deepl_tr(
-    text: str,
+    text: Optional[str],
     from_lang: Optional[str] = "auto",
     to_lang: Optional[str] = "zh",
     page=None,
@@ -76,10 +76,13 @@ async def deepl_tr(
     else:  # integer: log_level
         logzero.setup_default_logger(level=verbose)
 
-    if os.environ.get("DEBUG"):
+    if os.getenv("DEBUG"):
         logzero.loglevel(10)
 
     logger.debug(" Entry ")
+
+    if text is None:
+        return ""
 
     try:
         text = text.strip()
@@ -161,7 +164,7 @@ async def deepl_tr(
     content = await page.content()
 
     # with CodeTimer(name="fetching", unit="s", silent=_):
-    with about_time() as dur:
+    with about_time() as dur:  # type: ignore
         try:
             content = await page.content()
         except Exception as exc:
@@ -169,7 +172,9 @@ async def deepl_tr(
             raise
 
         doc = pq(content)
-        text_old = doc("#source-dummydiv").html()
+
+        # text_old = doc("#source-dummydiv").html()
+        text_old = doc(".lmt__side_container--target > div.lmt__textarea_container").html()
         logger.debug("Old source: %s", text_old)
 
         try:
@@ -179,11 +184,22 @@ async def deepl_tr(
             text_old = "_some unlikely random text_"
 
         logger.debug(
-            "text.strip(): %s, text_old.strip(): %s", text.strip(), text_old.strip()
+            "text: %s, text_old: %s", text, text_old
         )
 
+        try:
+            logger.debug(
+                "text.strip(): %s, text_old.strip(): %s", text.strip(), text_old.strip()  # type: ignore
+            )
+        except Exception as exc:
+            logger.warning(exc)
+
         # selector = "div.lmt__translations_as_text"
-        if text.strip() == text_old.strip() and same_langs:
+        try:  # text and text_old can be None, hence the try...except
+            _ = text.strip() == text_old.strip() and same_langs  # type: ignore
+        except Exception:
+            _ = False
+        if _:
             logger.debug(" ** early result: ** ")
             logger.debug(
                 "%s, %s", text, doc(".lmt__translations_as_text__text_btn").html()
@@ -251,19 +267,19 @@ async def deepl_tr(
             logger.debug(" loop: %s", idx)
 
     # deepl_tr.dur = dur
-    deepl_tr.dur = dur.duration_human
+    deepl_tr.dur = dur.duration_human  # type: ignore
 
     logger.debug(" Fini ")
 
-    # remove possible attached suffix, content can be None (abnormal)
+    # remove possible attached suffix
     try:
-        content = re.sub(r"[\d]+_$", "", content.strip()).strip()
+        content = re.sub(r"[\d]+_$", "", content.strip()).strip()  # type: ignore
     except Exception as exc:
         raise Exception(
             f" {exc}: scraping unsuccessful, "
             "deepl.com unreachable or deepl.com changed "
             "its layout or can be other issues."
-        )
+        ) from exc
 
     return content
 

@@ -1,13 +1,15 @@
-"""Run fastapi server pw.
+"""
+Run fastapi server pw.
 
 deepl_scraper_pw.deel_tr is sync
 
-python -c "from deepl_fastapi_pw import deepl_server; import nest_asyncio; nest_asyncio.apply(); deepl_server.run_uvicorn()"
+python -c "from deepl_fastapi_pw import deepl_server;
+import nest_asyncio; nest_asyncio.apply(); deepl_server.run_uvicorn()"
 python -c "from deepl_fastapi_pw import deepl_server; deepl_server.run_uvicorn()"
 
 greenlet.error: cannot switch to a different thread
 """
-# pylint: disable=invalid-name, duplicate-code, no-name-in-module, broad-except
+# pylint: disable=invalid-name, duplicate-code, no-name-in-module, broad-except, line-too-long
 # import nest_asyncio
 
 # import sys
@@ -17,10 +19,9 @@ from signal import SIG_DFL, SIGINT, signal
 from typing import Optional
 
 import nest_asyncio
+
 # import portalocker
 import uvicorn
-
-from deepl_scraper_pw.deepl_tr import deepl_tr
 from fastapi import FastAPI, Query
 from get_pwbrowser_sync.get_pwbrowser_sync import get_pwbrowser_sync
 
@@ -29,6 +30,9 @@ from logzero import logger
 from pydantic import BaseModel
 
 from deepl_fastapi_pw import __version__
+
+# from deepl_scraper_pw.deepl_tr import deepl_tr
+from deepl_fastapi_pw.deepl_tr import deepl_tr
 
 # lazy loading LOOP, wait for run_uvicorn to start first
 # import lazy_import
@@ -84,7 +88,8 @@ app = FastAPI(
 
 @app.post("/text/")
 def post_text(q: Text):
-    f"""Post -d '\u007b"text": "this is a test", "to_lang": "zh" \u007d'
+    """
+    Post -d '\u007b"text": "this is a test", "to_lang": "zh" \u007d'.
 
     to http://127.0.0.1:{port}/text/
     """
@@ -123,7 +128,8 @@ def get_text(
     from_lang: Optional[str] = None,
     to_lang: Optional[str] = "zh",
 ):
-    f"""Get text.
+    r"""
+    Get text.
 
     http://127.0.0.1:{port}/text/?q=abc&to_lang=zh
 
@@ -133,6 +139,8 @@ def get_text(
         "q": q,
         "from_lang": from_lang,
         "to_lang": to_lang,
+        "trtext": "",
+        "translation": "",
     }
     try:
         trtext = deepl_tr(
@@ -154,7 +162,8 @@ def get_text(
 
 
 def run_uvicorn():
-    """Run uvicor.
+    """
+    Run uvicor.
 
     Must be run from a different file, e.g., run_uvicorn.py
     """

@@ -1,7 +1,9 @@
 """
 Run uvicorn with deepl_fastapi_pw.deepl_server:app.
 
-uvicorn deepl_fastapi_pw.deepl_server:app --reload
+uvicorn deepl_fastapi_pw.deepl_server_pw:app --reload
+
+copy of run_uvicorn.py
 """
 # pylint: disable=duplicate-code
 from pathlib import Path
@@ -13,16 +15,16 @@ from logzero import logger
 
 
 def run_uvicorn(host="127.0.0.1", port=8000, debug=False, reload=False):
-    """Start uvicorn."""
+    """Run uvicorn."""
     log_level = None
     if debug:
         log_level = "debug"
     uvicorn.run(
         # app="deepl_fastapi.deepl_server:app",
-        app="deepl_fastapi_pw.deepl_server:app",
+        app="deepl_fastapi_pw.deepl_server_async:app",
         host=host,
         port=port,
-        # debug=debug,  # use log_level?
+        # debug=debug,
         log_level=log_level,
         reload=reload,
         # workers=2,

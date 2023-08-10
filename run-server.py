@@ -1,3 +1,3 @@
 import os
 
-os.system("pythonw start-server")
+os.system("pythonw start-server.py")

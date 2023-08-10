@@ -1,25 +1,38 @@
 """
-Run uvicorn with deepl_fastapi.deepl_server:app.
+Run uvicorn with deepl_fastapi_pw.deepl_server:app.
 
-uvicorn deepl_fastapi.deepl_server:app --reload
+uvicorn deepl_fastapi_pw.deepl_server:app --reload
 """
 # pylint: disable=duplicate-code
+import os
 from pathlib import Path
 from signal import SIG_DFL, SIGINT, signal
 
+import logzero
 import portalocker
 import uvicorn
 from logzero import logger
 
+try:
+    LOGLEVEL = int(os.getenv("LOGLEVEL"))  # type: ignore
+except Exception:
+    LOGLEVEL = 20
+if os.getenv("DEBUG") or LOGLEVEL <= 10:
+    # logzero.setup_logger(level=LOGLEVEL)
+    logzero.loglevel(level=LOGLEVEL)
 
 def run_uvicorn(host="127.0.0.1", port=8000, debug=False, reload=False):
     """Start uvicorn."""
+    log_level = None
+    if debug:
+        log_level = "debug"
     uvicorn.run(
         # app="deepl_fastapi.deepl_server:app",
         app="deepl_fastapi_pw.deepl_server_async:app",
         host=host,
         port=port,
-        debug=debug,
+        # debug=debug,
+        log_level=log_level,
         reload=reload,
         # workers=2,
         # loop="asyncio",  # default "auto"
