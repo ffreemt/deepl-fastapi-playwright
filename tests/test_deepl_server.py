@@ -1,17 +1,14 @@
 """Sanity check."""
 import os
-import sys
-from pathlib import Path
-from subprocess import Popen
 from threading import Thread
 from time import sleep
 
-import portalocker
 import requests
 from logzero import logger
 
 # start the server in a thread
 from deepl_fastapi_pw import __main__
+
 Thread(target=__main__.main, daemon=True).start()
 
 # start the server if not already started

@@ -71,6 +71,8 @@ descr = f"""Post -d '\u007b"text": "this is a test", "to_lang": "zh" \u007d'
 
     to http://127.0.0.1:{port}/text/
     """
+
+
 class Text(BaseModel):  # pylint: disable=too-few-public-methods
     """Define Text model."""
 

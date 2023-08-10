@@ -21,6 +21,7 @@ if os.getenv("DEBUG") or LOGLEVEL <= 10:
     # logzero.setup_logger(level=LOGLEVEL)
     logzero.loglevel(level=LOGLEVEL)
 
+
 def run_uvicorn(host="127.0.0.1", port=8000, debug=False, reload=False):
     """Start uvicorn."""
     log_level = None

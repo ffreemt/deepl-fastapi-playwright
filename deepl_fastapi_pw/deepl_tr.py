@@ -174,7 +174,9 @@ async def deepl_tr(
         doc = pq(content)
 
         # text_old = doc("#source-dummydiv").html()
-        text_old = doc(".lmt__side_container--target > div.lmt__textarea_container").html()
+        text_old = doc(
+            ".lmt__side_container--target > div.lmt__textarea_container"
+        ).html()
         logger.debug("Old source: %s", text_old)
 
         try:
@@ -183,9 +185,7 @@ async def deepl_tr(
             deepl_tr.first_run = 1
             text_old = "_some unlikely random text_"
 
-        logger.debug(
-            "text: %s, text_old: %s", text, text_old
-        )
+        logger.debug("text: %s, text_old: %s", text, text_old)
 
         try:
             logger.debug(
