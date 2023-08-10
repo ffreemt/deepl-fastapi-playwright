@@ -53,7 +53,7 @@ uvicorn deepl_fastapi_pw.deepl_server_async:app
 
 or
 ```bash
-python  -m deepl_fastapi_pw.deepl_server_async
+python -m deepl_fastapi_pw.deepl_server_async
 ```
 
 or run the server on the external net, for example at port 9888
