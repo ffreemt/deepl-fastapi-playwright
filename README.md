@@ -94,6 +94,10 @@ print(resp.json())
 # 'to_lang': 'zh', 'description': None}, 'result': '考验我 \n  我和他'}
 ```
 
+### NB
+* Text longer than 5000 characters will be trimmed to 5000. This is what the `deepl.com` webpage can handle.
+* The package `deepl-fastapi-pw` is in essence a browser from your local IP (although a proxy can be used, refer to get-pwbroser's doc for setting up). Hence if you send too many requests too frequently, your IP may be blocked by `deepl.com` temporarily, which of course will also disable `deepl-fastapi-pw`.
+
 ## Interactive Docs (Swagger UI)
 
  [http://127.0.0.1:8001/docs](http://127.0.0.1:8001/docs)
