@@ -61,9 +61,7 @@ async def get_page():
         await page.goto(url, timeout=16 * 1000)
     except Exception as exc:
         logger.error(
-            "%s",
-            f"unable to connect to {url}: {exc}, "
-            "make sure your net is up..."
+            "%s", f"unable to connect to {url}: {exc}, " "make sure your net is up..."
         )
         raise
 
