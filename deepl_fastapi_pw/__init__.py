@@ -9,5 +9,5 @@ import nest_asyncio
 
 nest_asyncio.apply()
 
-__version__ = "0.1.0a4"
+__version__ = "0.1.0a5"
 # __all__ = ("app",)

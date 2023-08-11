@@ -84,6 +84,10 @@ async def deepl_tr(
     if text is None:
         return ""
 
+    # handle / _slash_
+    # text = text.replace("/", " _slash_ ")
+    text = text.replace("/", "%5C%2F")
+
     try:
         text = text.strip()
     except Exception as exc:
@@ -274,6 +278,9 @@ async def deepl_tr(
     # remove possible attached suffix
     try:
         content = re.sub(r"[\d]+_$", "", content.strip()).strip()  # type: ignore
+
+        # restore slash: _slash_
+        content = content.replace("%5C%2F", "/")
     except Exception as exc:
         raise Exception(
             f" {exc}: scraping unsuccessful, "

@@ -23,4 +23,4 @@ run first:
 """
 import httpx
 
-print(httpx.get('http://127.0.0.1:8001/text/?to_lang=de&q=test 1\ntest 2', timeout=20).json())
+print(httpx.get('http://127.0.0.1:8001/text/?to_lang=de&q=test 1\ntest 2/test 3/', timeout=20).json())
