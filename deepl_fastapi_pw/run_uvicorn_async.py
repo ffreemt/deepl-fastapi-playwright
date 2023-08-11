@@ -3,7 +3,7 @@ Run uvicorn with deepl_fastapi_pw.deepl_server:app.
 
 uvicorn deepl_fastapi_pw.deepl_server:app --reload
 """
-# pylint: disable=duplicate-code
+# pylint: disable=duplicate-code, broad-except
 import os
 from pathlib import Path
 from signal import SIG_DFL, SIGINT, signal

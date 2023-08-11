@@ -9,7 +9,7 @@ os.environ['PYTHONPATH'] = Path(r"../get-pwbrowser-sync")
 
 Modi from pypi deepl-scraper-playwright\deepl_scraper_pw\deepl_tr.py
 """
-# pylint: disable=line-too-long, too-many-arguments, too-many-locals, too-many-branches, too-many-statements
+# pylint: disable=line-too-long, too-many-arguments, too-many-locals, too-many-branches, too-many-statements, broad-except
 import os
 import re
 import sys

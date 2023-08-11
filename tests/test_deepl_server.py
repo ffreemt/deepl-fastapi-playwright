@@ -1,4 +1,5 @@
-"""Sanity check."""
+"""Check."""
+# pylint: disable=broad-except
 import os
 from threading import Thread
 from time import sleep
@@ -55,6 +56,7 @@ if not locked:
 
 
 def test_deepl_server():
+    """Test server."""
     try:
         _ = requests.get("http://127.0.0.1:8001/text/?q=test me", verify=False, timeout=5)
         res = str(_.json())
@@ -69,14 +71,14 @@ def test_deepl_server():
         try:
             _ = requests.get("http://127.0.0.1:8001/text/?q=test me", verify=False, timeout=5)
             res = str(_.json())
-        except Exception as exc:
-            logger.error("2nd try: %s", exc)
+        except Exception as exc_:
+            logger.error("2nd try: %s", exc_)
             res = str(exc)
             # somehow Windows test dose not work on github VM
             # it's alright on local Windows 10.
-            # TODO will fix this later
+            # TODO: will fix this later
             if os.name.lower() not in ["posix"]:
                 # res = "我" + res
-                res = res
+                ...
 
     assert "我" in res

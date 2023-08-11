@@ -60,7 +60,11 @@ async def get_page():
     try:
         await page.goto(url, timeout=16 * 1000)
     except Exception as exc:
-        logger.error(f"unable to connect to {url}: {exc}, make sure your net is up...")
+        logger.error(
+            "%s",
+            f"unable to connect to {url}: {exc}, "
+            "make sure your net is up..."
+        )
         raise
 
     return page
@@ -69,8 +73,8 @@ async def get_page():
 try:
     LOOP = asyncio.get_event_loop()
     PAGE = LOOP.run_until_complete(get_page())
-except Exception as exc:
-    logger.error(exc)
+except Exception as exc_:
+    logger.error(exc_)
     raise
 
 descr = f"""curl -XPOST http://127.0.0.1:{port}/text/ -d '\u007b"text": "this is a test", "to_lang": "zh" \u007d'"""
@@ -105,6 +109,10 @@ def post_text(q: Text):
     from_lang = q.from_lang
     logger.debug("text: %s", text)
 
+    # if empty, return
+    if not text.strip():
+        return {"q": q, "result": text}
+
     # _ = sent_corr(text1, text2)
     try:
         # _ = await deepl_tr(
@@ -118,7 +126,7 @@ def post_text(q: Text):
             )
         )
     except Exception as exc:
-        logger.exception(exc)
+        logger.error(exc)
         _ = {"error": True, "message": str(exc)}
 
     return {"q": q, "result": _}
@@ -138,6 +146,12 @@ def get_text(
             dedent(
                 """
             paragraphs will be preserved.
+
+            quick test:
+
+            python -c "import httpx; print(httpx.get('http://127.0.0.1:8001/text/?q=test 1\ntest 2').json())"
+
+            python -c "import httpx; print(httpx.get('http://127.0.0.1:8001/text/?to_lang=de&q=test 1\ntest 2').json())"
             """.strip()
             )
         ),
@@ -157,6 +171,11 @@ def get_text(
         "from_lang": from_lang,
         "to_lang": to_lang,
     }
+
+    # if q is empty, return
+    if not q.strip():
+        return result
+
     try:
         # trtext = await deepl_tr(
         trtext = arun(
@@ -168,7 +187,7 @@ def get_text(
             )
         )
     except Exception as exc:
-        logger.exception(exc)
+        logger.error(exc)
         trtext = str(exc)
 
     result.update({"trtext": trtext})
@@ -179,7 +198,7 @@ def get_text(
     return result
 
 
-def run_uvicorn(port_: Optional[str] = None):
+def run_uvicorn(port_: Optional[int] = None):
     """
     Run uvicor.
 
@@ -211,8 +230,8 @@ if __name__ == "__main__":
     print("ctrl-C to interrupt, visit http://....:../docs for api docs")
     try:
         main()
-    except Exception as exc:
-        logger.error(exc)
+    except Exception as exc_:
+        logger.error(exc_)
     # uvicorn.run(app, host="0.0.0.0", port=8000)
     # uvicorn.run("app.app:app",host='0.0.0.0', port=4557, reload=True, debug=True, workers=3)
 
