@@ -71,6 +71,7 @@ try:
     PAGE = LOOP.run_until_complete(get_page())
 except Exception as exc:
     logger.error(exc)
+    raise
 
 descr = f"""curl -XPOST http://127.0.0.1:{port}/text/ -d '\u007b"text": "this is a test", "to_lang": "zh" \u007d'"""
 
