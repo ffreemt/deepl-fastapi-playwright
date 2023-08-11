@@ -61,9 +61,15 @@ or run the server on the external net, for example at port 9888
 uvicorn deepl_fastapi_pw.deepl_server:app --reload --host 0.0.0.0 --port 9888
 ```
 
-*   Explore and consume
+### Explore and consume
 
 Point your browser to [http://127.0.0.1:8001/text/?q=test&to_lang=zh](http://127.0.0.1:8001/text/?q=test&to_lang=zh)
+
+Or in command line:
+```bash
+python -c "import httpx; print(httpx.get('http://127.0.0.1:8001/text/?to_lang=zh&q=test 1\ntest 2').json())"
+# output: {'q': 'test 1\ntest 2', 'from_lang': None, 'to_lang': 'zh', 'trtext': '测试 1\n测试 2', 'translation': '测试 1\n测试 2'}
+```
 
 Or in python code (`pip install requests` first)
 ```python
@@ -78,7 +84,6 @@ print(requests.get(url).json())
 
 `'translation'` is there for `OmegaT` plugin. Refer to the `OmegaT Fake MT plugin setup` part
 in [https://github.com/ffreemt/deepl-fastapi](https://github.com/ffreemt/deepl-fastapi)
-
 ```
 # post
 text = "test me \n and him"
