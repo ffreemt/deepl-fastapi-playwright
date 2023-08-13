@@ -95,7 +95,7 @@ print(resp.json())
 ```
 
 ### NB
-* Text longer than 1500 characters will be trimmed to 1500. This is what the `deepl.com` webpage can handle (used to be 5000).
+* Text longer than 1500 characters will be trimmed to 1500. This is what the `deepl.com` webpage can handle (used to be 5000 characters).
 * The package `deepl-fastapi-pw` is in essence a browser from your local IP (although a proxy can be used, refer to get-pwbroser's doc for setting up). Hence if you send too many requests too frequently, your IP may be blocked by `deepl.com` temporarily, which of course will also disable `deepl-fastapi-pw`.
 
 ## Interactive Docs (Swagger UI)
