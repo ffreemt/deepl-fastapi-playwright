@@ -61,8 +61,10 @@ async def get_page():
         await page.goto(url, timeout=90 * 1000)
     except Exception as exc:
         logger.error(
-            "%s", f"unable to connect to {url}: {exc}, " "make sure your net is up and "
-            "your IP is not blocked by deepl.com..."
+            "%s",
+            f"unable to connect to {url}: {exc}, "
+            "make sure your net is up and "
+            "your IP is not blocked by deepl.com...",
         )
         raise SystemExit(1) from exc
 
@@ -200,7 +202,7 @@ def get_text(
 
 @app.get("/check")
 def read_root():
-     return {"status": "ok"}
+    return {"status": "ok"}
 
 
 def run_uvicorn(port_: Optional[int] = None):
