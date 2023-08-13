@@ -58,12 +58,13 @@ async def get_page():
 
     url = "https://www.deepl.com/translator"
     try:
-        await page.goto(url, timeout=16 * 1000)
+        await page.goto(url, timeout=90 * 1000)
     except Exception as exc:
         logger.error(
-            "%s", f"unable to connect to {url}: {exc}, " "make sure your net is up..."
+            "%s", f"unable to connect to {url}: {exc}, " "make sure your net is up and "
+            "your IP is not blocked by deepl.com..."
         )
-        raise
+        raise SystemExit(1) from exc
 
     return page
 
@@ -137,8 +138,9 @@ def get_text(
     q: str = Query(
         # None,
         "",
-        max_length=5000,
-        min_length=1,
+        # max_length=5000,
+        max_length=1500,
+        min_length=0,
         title="text to translate",
         description=(
             dedent(
@@ -194,6 +196,11 @@ def get_text(
     logger.debug("result: %s", result)
 
     return result
+
+
+@app.get("/check")
+def read_root():
+     return {"status": "ok"}
 
 
 def run_uvicorn(port_: Optional[int] = None):

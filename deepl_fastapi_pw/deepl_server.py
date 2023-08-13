@@ -120,7 +120,7 @@ def get_text(
     q: Optional[str] = Query(
         None,
         max_length=1500,
-        min_length=1,
+        min_length=0,
         title="text to translate",
         description=(
             "max. 5000 chars, paragraphs will be preserved. "

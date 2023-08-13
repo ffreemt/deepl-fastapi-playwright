@@ -84,9 +84,11 @@ async def deepl_tr(
     if text is None:
         return ""
 
+    # urllib.parse.quote will solve all? already in place
     # handle / _slash_
     # text = text.replace("/", " _slash_ ")
     text = text.replace("/", "%5C%2F")
+    text = text.replace("#", "%23")
 
     try:
         text = text.strip()
@@ -96,7 +98,7 @@ async def deepl_tr(
         raise
 
     # if text remains the same but from_lang or to_lang changed, attach random string \d_
-    # if text.strip() == deepl_tr.strip() and (deepl_tr.from_lang
+    # if text.strip() == deepl_tr.text.strip() and (deepl_tr.from_lang
     logger.debug(
         "text==deepl_tr.text: %s==%s, from_lang==deepl_tr.from_lang: %s==%s, to_lang==deepl_tr.to_lang: %s==%s",
         text,
@@ -281,6 +283,7 @@ async def deepl_tr(
 
         # restore slash: _slash_
         content = content.replace("%5C%2F", "/")
+        content = content.replace("%23", "#")
     except Exception as exc:
         raise Exception(
             f" {exc}: scraping unsuccessful, "

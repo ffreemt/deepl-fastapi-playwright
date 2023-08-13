@@ -1,0 +1,129 @@
+https://www.forbes.com/sites/markminevich/2022/07/08/how-to-fight-climate-change-using-ai/?sh=429688862a83
+# How To Fight Climate Change Using AI
+img_
+Group of children holding planet earth over defocused nature background with copy space. Element of ... [+] this image furnished by NASA ( https://earthobservatory.nasa.gov/blogs/elegantfigures/2011/10/06/crafting-the-blue-marble/ ) getty
+
+Inflation is a global problem, and it's one that is being exacerbated by climate change. This is because the increased frequency and severity of extreme weather events drive up prices for food, energy, and other necessities. But there is hope: AI can help us fight climate change by reducing emissions, improving energy efficiency, and increasing the use of renewable energy sources. Therefore, the Green transition is a key pillar in fighting inflation, and AI is an important tool in this effort.
+
+In fact, according to a 2022 BCG Climate AI Survey report (shown below), 87% of private and public sector CEOs with decision-making power in AI and climate believe AI is an essential tool in the fight against climate change. Public and private sector executives identified the most significant business value of climate-related advanced analytics and AI in the field of mitigation (reduction) at 61%, with mitigation (measuring emissions) at 57%, as part of the same report (shown in Exhibit 3 below). Other areas include adaptation (forecasting hazards) at 44%, adaptation (managing vulnerabilities and exposure) at 42%, mitigation (removing emissions) at 37% and fundamentals (facilitating climate research, climate finance, and education) at 28%.
+img_
+Public- and private-sector leaders who oversee climate and AI topics support using AI to fight ... [+] climate change, but only 43% have a vision for how to use it (BCG Climate AI Survey, May 2022)
+
+There are many ways in which AI can contribute to climate change mitigation, e.g., through energy efficiency or by reducing emissions from transportation, agriculture and industry. AI can also help us adapt to the impacts of climate change by improving our ability to predict extreme weather events and providing decision-support tools to help us respond more effectively. AI can also play a critical role in increasing our resilience to the effects of climate change by helping us identify risk factors and develop plans to mitigate them.
+img_
+Public- and private-sector leaders see the greatest business value in reducing and measuring ... [+] emissions (BCG Climate AI survey, May 2022)
+
+“The most urgent need in this context is not to have more powerful AI but to become smarter at _where_ and _how_ we use AI. There are so many unexplored opportunities,” states Lambert Hogenhout, Chief Data Analytics, Partnerships and Technology Innovation at the Office for Information and Communications Technology (OICT). This sentiment embodies the consensus among many experts in the field: that we need to be more strategic about where and how we deploy AI to make the most impact.
+
+Therefore, a new framework for climate AI is vital to focus the debate on investments and innovation in space. "To effectively address the underlying drivers and risks of our excessive reliance on fossil fuels, we need to embrace a mosaic of innovative solutions. AI sits at the center of that mosaic and is already contributing to massively increased transparency, faster gains in efficient power generation and storage, and a renewed confidence in large-scale investments,” states James Hodson, CEO of AI for Good Foundation.
+
+The Framework For Using AI in Combating Climate Change, shown below, was developed by BCG for the latest AI for the Planet Report with input from experts on the AI for the Planet Advisory Board. The framework comprises three main themes: mitigation, adaptability and resilience, and fundamentals. Mitigation and fundamentals are critical to our efforts to combat climate change, but adaptability and resilience are necessary for ensuring that people and the economy can withstand the effects of climate change today. True resiliency will require us to take a systems-level view of the world and use AI to help us identify risks, vulnerabilities and potential disruptions when it comes to climate change. We must also build the capacity and capabilities to respond rapidly to these threats and create resilient architecture.
+img_
+Framework for Using AI to Combat Climate Change (BCG Project Experience, Climate Change AI, Global Partnership on AI)
+
+“Despite its promise, AI cannot be used to solve the climate crisis in isolation. It depends on the will of decision-makers to act and make the necessary changes—supported partly by AI and other emerging technologies," stated Damien Gromier, founder and Co-Chair of AI for the Planet Alliance and a co-author of the report. Therefore, it is essential to note that AI is not a panacea for climate change but rather one tool that can be used to help us build a more resilient future.
+
+## Framework For Using AI in Combating Climate Change
+
+The Framework For Using AI in Combating Climate Change is changing how we think about climate change. In the past, adaptation was often thought of as something that we did after the fact, in response to an event that had already occurred. But with the increasing frequency and severity of extreme weather events, it is becoming clear that we must take a proactive approach to adaptation. We need to anticipate the potential impacts of climate change and take steps to mitigate them before they occur. This is essential to ensuring the resilience of our communities and our economy and protecting the most vulnerable among us. AI can help accelerate mitigation, adaptation and resilience efforts by providing the tools and data we need to make informed decisions.
+
+## Mitigation
+
+The Mitigation portion of the Framework For Using AI in Combating Climate Change is a combination of Measurement on the macro and micro levels, Reduction (Reduction of GHG emissions intensity, ​Improvement of energy efficiency and ​Reduction of greenhouse effects) as well as Removal (Environmental removal and ​Technological removal).
+
+### Measurement
+
+**Macro-level measurement:** Overall environmental emissions are a crucial component of models that project future climates. AI may aid such models by improving measures, for example, or scanning remote-sensing data from satellites for further analysis.
+
+**Micro-level measurement:** Producers can use micro-level emissions measurements to understand the carbon footprints of their products, track their progress towards ESG targets, or identify opportunities to reduce scope 1, 2, and 3 emissions. Consumers can use this information to make more informed choices about the products they purchase and their actions to reduce their carbon footprints.
+
+### Reduction
+
+The global climatic emergency necessitates accelerating efforts to reduce current emissions and their resulting Green House Gas consequences. Immediate and ambitious mitigation measures are essential for averting the most catastrophic consequences of climate change. There are three components to reduction:
+
+**Reduction of GHG emissions intensity:** AI solutions can be used to support the switch toward new energy sources. Supply forecasting for solar energy can help us identify areas where there is potential for increasing the use of solar energy, thus reducing GHG emissions.
+
+**Reducing Emissions-Generating Activities:** AI can also reduce emissions by optimizing supply chains through improved demand prediction (to combat overproduction) or efficient transportation of goods (such as shortening delivery times and minimizing energy use). This can be done using data to generate models that predict demand or optimize transportation routes.
+
+**Reduction of greenhouse effects:** If policymakers turn towards geoengineering solutions to curtail the effects of climate change, AI will be an essential tool for accelerating chemistry research and can help us to develop new materials and processes that result in less greenhouse gas emissions. Additionally, encouraging behavioral change can reduce energy consumption and lower emissions.
+
+### Removal
+
+Removing greenhouse gasses from the atmosphere is one way to mitigate climate change. This can be done by natural processes, such as increased photosynthesis by trees, or by technological means, such as carbon capture and storage. There are two main types of removal:
+
+**Environmental removal:** Natural ecosystems such as forests, algae, and wetlands play a central role in atmospheric carbon removal. Monitoring these ecosystems requires gathering and processing large amounts of data, a situation in which AI is very effective.
+
+**Technological removal:** Environmental removal can be complemented with industrial processes, but those processes are still at their inception, facing scaling issues. AI would be a strong ally in solving these issues as quickly as possible.
+
+Having solidified the Mitigation portion of the framework, we now need to focus on the Adaptation side.
+
+## Adaptation and Resilience
+
+### Hazard Forecasting
+
+**​Projecting localized long-term trends:** To anticipate the potential impacts of climate change, we need to be able to forecast localized long-term trends. For example, what is the probability of a significant drought occurring in a particular region over the next 10 years? What are the potential impacts of that drought on agriculture, water supplies and human health? AI can help us answer these questions by analyzing historical data and predicting future trends.
+
+**​Building early warning systems:** In addition to forecasting long-term trends, AI can also help us build early warning systems that can provide timely alerts about upcoming events. For example, by analyzing data from weather stations, satellite images and sensor networks, AI can help us identify conditions conducive to extreme weather events such as hurricanes, floods and wildfires. These early warning systems can allow us to take action to mitigate the impacts of these events before they occur. For example, according to a World Economic Forum Report on How AI can help the world fight wildfires, AI can help prevent wildfires by utilizing data sources like satellite images, real-time weather data, and social media posts to developing better fire detection and fire spread algorithms. A smart framework integrating all of these systems is necessary to build a dynamic wildfire risk map with an interactive fire spread simulation.
+
+### Vulnerability and Exposure Management
+
+**​Managing crises:** Once an extreme weather event has occurred, AI can help us manage the crisis by providing decision-support tools. For example, AI can be used to identify people at risk of being affected by the event and match them with the resources they need. AI can also monitor the situation in real-time and provide information about the people's location, infrastructure condition and the status of relief efforts.​
+
+**​Strengthening infrastructure:** Intelligent irrigation systems that use weather data and plant sensors to optimize watering schedules can help reduce the impact of drought. AI-enabled flood defenses that use real-time data about rainfall, river levels and land elevation can help protect against flooding. And intelligent buildings that use sensor data to adjust heating, cooling and ventilation can help save energy and reduce emissions. According to a project summary from the UN, Knowledge Graphs can store and reason over vast amounts of data to help identify patterns, correlations, and dependencies that are otherwise hidden in complex datasets and can ultimately analyze floods, droughts, and other extreme weather events. This enables resilience in the face of climate change.
+
+**​Protecting populations:** Large-scale migration is one of the potential impacts of climate change. AI can help us manage this by providing decision-support tools for managing refugee camps, tracking migrants and coordinating relief efforts. AI can also be used to monitor the situation in real-time and provide information about the location of people, the condition of infrastructure and the status of relief efforts
+
+**​Preserving biodiversity:** Species identification systems that use machine learning can help us track and protect endangered species. And AI-enabled monitoring systems that use satellite images and sensor data can help us detect illegal logging, poaching and other activities that threaten biodiversity.
+
+**The Framework For Using AI in Combating Climate Change** shows how to build truly resilient and robust systems that can withstand and recover from extreme weather events. It also created a set of fundamentals for climate research and modeling of economic and social transition, climate finance such as carbon-price forecasting, education, and behavioral change.
+
+"Companies that put AI at their core are far more likely to be contributing positively to climate resilience, adaptation, and mitigation efforts than those who do not,” states Hodson.
+
+Moreover, according to Hamid Maher, managing director and partner at BCG and BCG GAMMA, and a co-author of the AI for the Planet report, “AI’s unique capacity to gather, complete, and interpret large, complex data sets means it can help stakeholders take a more informed and data-driven approach to combating carbon emissions and addressing climate risks. However, most existing AI-related climate solutions are scattered, difficult to access, and lack the resources to scale. This is what needs to change.” However, several innovative climate-tech solutions are already leveraging AI to progress in all three themes of the Adaptability and Resilience framework.
+
+“AI, as well as other emerging technologies, can play a huge role in helping us get back on track for the Sustainable Development Goals,’ says Reina Otsuka, Digital Innovation Specialist for Nature Climate and Energy at UNDP and steering group member of AI for the Planet. “AI algorithms have huge potential to evolve in sustainable directions, including placing value on climate change mitigation and offering additional resilience and adaptation to climate change-related impact, with special consideration to people already most exposed and vulnerable to climate change linked risks.”
+
+In addition, UNESCO's Director for Partnerships and Operational Programme Monitoring, Communication and Information Sector and steering group member of AI for the Planet, Dr. Marielza Oliveria stated, “It is not possible to address our urgent and devastating climate crisis with old solutions. We must add a tremendous amount of innovation to the mix. Artificial Intelligence can help us find opportunities to change our current dynamics at a scale large enough for rapid impact. Deployed in a human-centric, responsible and ethical way, AI is an accelerator for sustainable development. Every day, I see the transformative power of AI for the planet in action, from enabling companies to minimize carbon emissions across their entire value chains to helping governments to forecast and respond effectively to weather patterns that affect vulnerable coastal communities. This is what we need: all brains on deck!”
+
+## Blue Sky Analytics
+
+Based out of The Hague, Netherlands, Blue Sky Analytics is a climate-tech company specializing in converting satellite data into environmental intelligence. The company's API-based collection of environmental datasets uses satellite data, AI, and the cloud to provide insights into various topics related to the planet and its health. This company also features the AI for the Planet report as an example of a successful climate-tech startup.
+
+### One Concern
+
+One Concern, based in California, USA, uses artificial intelligence to estimate damage from natural phenomena. The company takes a holistic approach to uncovering risk exposure and building resilience, not only considering the climate risk and disaster exposure of a single building but also the networks it depends on, such as transport links and power grids.
+
+### Cloud to Street
+
+Cloud to Street, based out of New York, is a company that uses satellites and AI to track floods in near real-time anywhere on earth. The company runs a global flood database offering insights into flood exposure worldwide. Based out of New York, USA, Cloud to Street is dedicated to helping reduce the risk of flooding and saving lives.
+
+### Prospera
+
+Prospera, a Tel-Aviv based company, is a developer of machine vision technologies designed to monitor and analyze plant development, health, and stress. The company's technology captures multiple layers of crop field data, including climate and visual data, to spot anomalies sooner. Prospera's technology is available via mobile and web dashboards.
+
+### EXCI
+
+EXCI, based in Maroochydore, Australia, is a bushfire detection technology company that uses AI models to fuse data from satellites and ground-based sensors. This provides persistent systematic surveillance of wildfires, empowering firefighters with the intelligence to efficiently manage and fight them. The company is based in Maroochydore, Australia.
+
+### Kuzi
+
+Kuzi is a Kenyan company that uses artificial intelligence to predict the breeding, occurrence, and migration routes of desert locusts across the Horn of Africa and Eastern African countries. The company's AI-powered tool uses satellite data, soil sensor data, ground meteorological observation, and machine learning to make its predictions.
+
+These solutions are just a few illustrative examples of how AI is being used to adapt to and mitigate the effects of climate change today. "The next frontier in AI for climate will be decision support tools and behavioral incentivization—pushing people, companies, and governments to do the right thing because it's in their best interests," according to Hodson.
+
+## A Call for Action
+
+AI for the Planet Alliance is launching a call for solutions to provide visibility, networks and business support for climate-AI solutions worldwide, supporting them on their journey to scale and maximize impact. AI for the Planet is an alliance created by Startup Inside, with Boston Consulting Group (BCG) and BCG GAMMA as knowledge partners, and in collaboration with the AI for Good Foundation; the United Nations Development Programme (UNDP); the United Nations Educational, Scientific and Cultural Organization (UNESCO); and the UN Office of Information and Communications Technology (OICT).
+
+It is a unique, multidisciplinary, and diverse coalition intended to 1. Promote innovation in applying advanced analytics and artificial intelligence (AI) to climate challenges, supported by global experts from academia, startups, and the public and private sectors; 2. Act as a global platform for identifying and prioritizing the leading tools and use cases for AI in addressing the climate crisis; 3. Identify and champion the most promising solutions for addressing climate change mitigation, adaptation, and resilience, especially in the Global South, offering the visibility and recognition of the solutions; 4. Ensure impact at scale through concrete and measurable actions, such as building access to funding and practitioners on the ground; and 5. Facilitate the development of networks between project teams, investors, and experts in the field—including startups, corporations, and the public sector.
+
+Moreover, AI for the Planet Alliance is currently accelerating the global search for startups that are using AI to address climate change in one or more of the following ways:
+
+  * Improving our understanding of the natural world and how it is changing
+  * Developing new methods for monitoring and measuring environmental phenomena
+  * Helping us make better decisions about how to use and conserve our natural resources
+  * Reducing greenhouse gas emissions
+  * Adapting to and mitigating the effects of climate change
+
+AI is a game-changing critical enabler that has the potential to speed up humanity's race against climate change. With AI, we have a chance to build a more resilient future for us all. As the effects of climate change become more widespread and severe, it is critical that we continue to invest in and support climate-tech companies that are using AI to develop solutions.
+

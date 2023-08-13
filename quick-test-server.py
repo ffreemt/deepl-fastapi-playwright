@@ -18,9 +18,12 @@ use:
 
 python -c "import httpx; print(httpx.get('http://127.0.0.1:8001/text/?to_lang=de&q=test 1\ntest 2').json())"
 
+python -c "import httpx; from urllib.parse import quote; q=quote('test 1\ntest 2') print(httpx.get(f'http://127.0.0.1:8001/text/?to_lang=de&q={q}').json())"
+
 run first:
     python -m deepl_fastapi_pw
 """
 import httpx
 
 print(httpx.get('http://127.0.0.1:8001/text/?to_lang=de&q=test 1\ntest 2/test 3/', timeout=20).json())
+print(httpx.get('http://127.0.0.1:8001/text/?to_lang=zh&q=test 1\ntest 2/test 3/', timeout=20).json())

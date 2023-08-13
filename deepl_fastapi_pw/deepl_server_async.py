@@ -128,7 +128,7 @@ def get_text(
         # None,
         "",
         max_length=5000,
-        min_length=1,
+        min_length=0,
         title="text to translate",
         description=(
             dedent(
